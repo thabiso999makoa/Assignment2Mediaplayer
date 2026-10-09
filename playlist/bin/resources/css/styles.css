@@ -1,0 +1,177 @@
+
+.root {
+    -fx-background-color: #050505;
+}
+
+/* --- Video Panel --- */
+#video-panel {
+    -fx-background-color: #000000;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 0 0 2 0;
+    -fx-effect: dropshadow(gaussian, rgba(204, 0, 0, 0.1), 10, 0, 0, 5);
+}
+
+/* --- Control Bar --- */
+#control-bar {
+    -fx-background-color: linear-gradient(to bottom, #1f1f1f, #0a0a0a);
+    -fx-padding: 15 25;
+    -fx-border-color: #cc0000;
+    -fx-border-width: 2 0 0 0;
+    -fx-alignment: center-left;
+    -fx-spacing: 15;
+}
+
+/* --- Buttons --- */
+.control-btn {
+    -fx-background-color: linear-gradient(to bottom, #ff3333, #cc0000);
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.3, 0, 3);
+    -fx-transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4d4d, #e60000);
+    -fx-effect: dropshadow(gaussian, rgba(204, 0, 0, 0.6), 10, 0.4, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.control-btn:pressed {
+    -fx-background-color: linear-gradient(to bottom, #990000, #660000);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 2, 0.2, 0, 1);
+}
+
+#btn-add {
+    -fx-background-color: linear-gradient(to bottom, #333333, #1a1a1a);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#btn-add:hover {
+    -fx-background-color: linear-gradient(to bottom, #444444, #2a2a2a);
+}
+
+#btn-remove {
+    -fx-background-color: linear-gradient(to bottom, #ff3333, #cc0000);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 0 0 5 5;
+}
+
+#btn-remove:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4d4d, #e60000);
+}
+
+/* --- Volume Slider --- */
+#volume-slider {
+    -fx-pref-width: 120px;
+}
+
+#volume-slider .track {
+    -fx-background-color: #333333;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 6px;
+}
+
+#volume-slider .thumb {
+    -fx-background-color: #cc0000;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 16px;
+    -fx-pref-height: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(204, 0, 0, 0.5), 5, 0.3, 0, 2);
+}
+
+#volume-slider .thumb:hover {
+    -fx-background-color: #ff3333;
+}
+
+/* --- Playlist Panel --- */
+#playlist-panel {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 0 0 0 2;
+}
+
+#playlist-header {
+    -fx-background-color: linear-gradient(to right, #1a1a1a, #0f0f0f);
+    -fx-padding: 15;
+    -fx-border-color: #333333;
+    -fx-border-width: 0 0 1 0;
+}
+
+#playlist-title {
+    -fx-text-fill: #cc0000;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(204, 0, 0, 0.3), 5, 0.3, 0, 2);
+}
+
+#item-count {
+    -fx-text-fill: #666666;
+    -fx-font-size: 12px;
+}
+
+/* --- List View & Cells --- */
+#playlist-list {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: transparent;
+    -fx-control-inner-background: #0a0a0a;
+}
+
+#playlist-list .list-cell {
+    -fx-background-color: #0a0a0a;
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 13px;
+    -fx-padding: 12 15;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 0 0 1 0;
+}
+
+#playlist-list .list-cell:hover {
+    -fx-background-color: #1f1f1f;
+    -fx-text-fill: white;
+}
+
+#playlist-list .list-cell:filled:selected {
+    -fx-background: linear-gradient(to right, #cc0000, #800000);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* --- Custom Scrollbar --- */
+.scroll-bar {
+    -fx-background-color: #0a0a0a;
+    -fx-pref-width: 10px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #cc0000;
+    -fx-background-radius: 5px;
+}
+
+.control-btn:pressed, 
+#btn-add:pressed, 
+#btn-remove:pressed {
+    -fx-opacity: 0.4; /* This makes the button look dim/transparent when clicked */
+    -fx-scale-x: 0.95; /* Slight shrink effect */
+    -fx-scale-y: 0.95;
+}
+
+.muted-state {
+    -fx-opacity: 0.5; /* Stays dim as long as it is muted */
+    -fx-background-color: linear-gradient(to bottom, #666666, #333333) !important;
+}
+
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #ff3333;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
